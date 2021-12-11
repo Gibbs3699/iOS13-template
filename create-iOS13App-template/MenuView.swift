@@ -33,7 +33,7 @@ struct MenuView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
-            .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.8084815362, green: 0.7902384962, blue: 0.9718133802, alpha: 1))]), startPoint: .top, endPoint: .bottom))
+            .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.7759362278, green: 0.6892160573, blue: 0.8832735475, alpha: 1))]), startPoint: .top, endPoint: .bottom))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 20.0)
             .padding(.horizontal, 30)

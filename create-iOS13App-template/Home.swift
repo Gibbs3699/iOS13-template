@@ -16,25 +16,8 @@ struct Home: View {
             Color(#colorLiteral(red: 0.5423473382, green: 0.3453945327, blue: 0.9551446944, alpha: 0.8296998889))
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-            VStack {
-                HStack {
-                    Text("Watching")
-                        .font(.system(size: 28, weight: .bold))
-                    
-                    Spacer()
-                    
-                    Button(action: {self.showProfile.toggle()}){
-                        Image("60")
-                            .resizable()
-                            .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .clipShape(Circle())
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.top, 30)
+             HomeView(showProfile: $showProfile)
                 
-                Spacer()
-            }
             .padding(.top, 44)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -47,7 +30,7 @@ struct Home: View {
             
             MenuView()
                 .background(Color.black.opacity(0.001))
-                .offset(y: showProfile ? 0 : 600)
+                .offset(y: showProfile ? 0 : screen.height)
                 .offset(y: viewState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
@@ -73,3 +56,18 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
+
+struct AvatarView: View {
+    @Binding var showProfile: Bool
+    
+    var body: some View {
+        Button(action: {self.showProfile.toggle()}){
+            Image("60")
+                .resizable()
+                .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .clipShape(Circle())
+        }
+    }
+}
+
+let screen = UIScreen.main.bounds

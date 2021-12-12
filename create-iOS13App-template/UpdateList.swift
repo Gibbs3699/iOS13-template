@@ -11,7 +11,7 @@ struct UpdateList: View {
     var body: some View {
         NavigationView {
             List(updateData) { update in
-                NavigationLink(destination: Text(update.text)) {
+                NavigationLink(destination: UpdateDetail(update: update)) {
                     HStack {
                         Image(update.image)
                             .resizable()
@@ -60,7 +60,7 @@ struct Update: Identifiable {
 
 let updateData = [
     Update(image: "Card1", title: "SwiftUI Advanced", text: "Text", date: "Jan 1"),
-    Update(image: "Card2", title: "Website", text: "Text", date: "Jan 1"),
+    Update(image: "Card2", title: "Webflow", text: "Text", date: "Jan 1"),
     Update(image: "Card3", title: "ProtoPie", text: "Text", date: "Jan 1"),
     Update(image: "Card4", title: "SwiftUI", text: "Text", date: "Jan 1"),
     Update(image: "Card5", title: "Framer Playground", text: "Text", date: "Jan 1")

@@ -10,13 +10,14 @@ import SwiftUI
 struct Home: View {
     @State var showProfile = false
     @State var viewState = CGSize.zero
+    @State var showContent = false
     
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.5423473382, green: 0.3453945327, blue: 0.9551446944, alpha: 0.8296998889))
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
-             HomeView(showProfile: $showProfile)
+            HomeView(showProfile: $showProfile, showContent: $showContent )
                 
             .padding(.top, 44)
             .background(Color.white)
@@ -47,6 +48,12 @@ struct Home: View {
                         self.viewState = .zero
                     }
                 )
+            
+            if showContent {
+                Color.white.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                
+                ContentView()
+            }
         }
     }
 }

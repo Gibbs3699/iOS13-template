@@ -25,8 +25,9 @@ struct RingView: View {
                 .frame(width: width, height: height)
             
             Circle()
-                .trim(from: show ? progress:1, to: 1)
+                .trim(from: show ? progress : 1, to: 1)
                 .stroke(LinearGradient(gradient: Gradient(colors: [Color(color1), Color(color2)]), startPoint: .topTrailing, endPoint: .bottomLeading), style: StrokeStyle(lineWidth: 5*multiplier, lineCap: .round, miterLimit: .infinity, dash: [20,0], dashPhase: 0))
+                .animation(Animation.easeInOut.delay(0.1))
                 .rotationEffect(Angle(degrees: 90))
                 .rotation3DEffect(
                     Angle(degrees: 180),
@@ -34,13 +35,14 @@ struct RingView: View {
                 )
                 .frame(width: width, height: height)
                 .shadow(color: Color(color2).opacity(0.1), radius: 3*multiplier, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 3*multiplier)
+//                .animation(.easeInOut)
             
             Text("\(Int(percent))%")
                 .font(.system(size: 14*multiplier))
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .onTapGesture {
                     self.show.toggle()
-                }
+            }
         }
     }
 }

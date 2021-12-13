@@ -187,11 +187,9 @@ struct BottomCardView: View {
                     .animation(Animation.easeInOut.delay(0.3))
                 
                 VStack(alignment: .leading, spacing: 8.0) {
-                    Text("SwiftUI").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    Text("SwiftUI").bold().modifier(FontModifiers(style: .caption))
                     Text("12 of 12 sections completed\n10 hours spent so far")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .lineSpacing(4)
+                        .modifier(FontModifiers(style: .caption))
                 }
                 .padding(20)
                 .background(Color.white)

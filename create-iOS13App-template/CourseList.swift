@@ -72,7 +72,7 @@ struct CourseView: View {
                 Spacer()
                 ZStack {
                     Image(uiImage: #imageLiteral(resourceName: "Logo1"))
-                        .opacity(show ? 5:0)
+                        .opacity(show ? 0:1)
                     
                     
                     VStack {
@@ -80,6 +80,10 @@ struct CourseView: View {
                             .font(.system(size: 16, weight: .medium))
                             .foregroundColor(.white)
                     }
+                    .frame(width: 36, height: 36)
+                    .background(Color.black)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    .opacity(show ? 1:0)
                 }
                 
             }

@@ -72,7 +72,7 @@ struct CourseView: View {
                 Spacer()
                 ZStack {
                     Image(uiImage: #imageLiteral(resourceName: "Logo1"))
-                        .opacity(show ? 1:0)
+                        .opacity(show ? 5:0)
                     
                     
                     VStack {

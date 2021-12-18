@@ -12,13 +12,13 @@ struct CourseList: View {
     @State var courses = courseData
     @State var active = false
     @State var activeIndex = -1
-    @State var activeVIew = CGSize.zero
+    @State var activeView = CGSize.zero
     
     var body: some View {
         ZStack {
-            Color.black.opacity(Double((self.activeVIew.height)/500))
+            Color.black.opacity(Double(self.activeView.height/500))
                 .animation(.linear)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             
             ScrollView {
                 VStack(spacing: 30) {
@@ -31,7 +31,14 @@ struct CourseList: View {
                     
                     ForEach(courses.indices, id: \.self) { index in
                         GeometryReader { geometry in
-                            CourseView(show: self.$courses[index].show, course: self.courses[index], active: self.$active, index: index, activeIndex: self.$activeIndex, activeView: self.$activeVIew)
+                            CourseView(
+                                show: self.$courses[index].show,
+                                course: self.courses[index],
+                                active: self.$active,
+                                index: index,
+                                activeIndex: self.$activeIndex,
+                                activeView: self.$activeView
+                            )
                                 .offset(y: self.courses[index].show ? -geometry.frame(in: .global).minY : 0)
                                 .opacity(self.activeIndex != index && self.active ? 0 : 1)
                                 .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
@@ -61,9 +68,9 @@ struct CourseView: View {
     @Binding var show: Bool
     var course: Course
     @Binding var active: Bool
-    var index : Int
+    var index: Int
     @Binding var activeIndex: Int
-    @Binding var activeView : CGSize
+    @Binding var activeView: CGSize
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -126,11 +133,11 @@ struct CourseView: View {
                 .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
             .gesture(
                 show ?
-                DragGesture()
-                    .onChanged { value in
-                        guard value.translation.height < 300 else {return}
-//                        guard value.translation.height > 0 else {return}
-                        self.activeView = value.translation
+                DragGesture().onChanged { value in
+                    guard value.translation.height < 300 else { return }
+                    guard value.translation.height > 0 else { return }
+                    
+                    self.activeView = value.translation
                 }
                 .onEnded { value in
                     if self.activeView.height > 50 {
@@ -142,29 +149,34 @@ struct CourseView: View {
                 }
                 : nil
             )
-            
             .onTapGesture {
                 self.show.toggle()
                 self.active.toggle()
                 if self.show {
                     self.activeIndex = self.index
-                }else {
+                } else {
                     self.activeIndex = -1
                 }
+            }
+            
+            if show {
+//                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+//                    .background(Color.white)
+//                    .animation(nil)
             }
         }
         .frame(height: show ? screen.height : 280)
         .scaleEffect(1 - self.activeView.height / 1000)
-        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10, z: 0))
+        .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10.0, z: 0))
         .hueRotation(Angle(degrees: Double(self.activeView.height)))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
         .gesture(
             show ?
-            DragGesture()
-                .onChanged { value in
-                    guard value.translation.height < 300 else {return}
-//                        guard value.translation.height > 0 else {return}
-                    self.activeView = value.translation
+            DragGesture().onChanged { value in
+                guard value.translation.height < 300 else { return }
+                guard value.translation.height > 0 else { return }
+                
+                self.activeView = value.translation
             }
             .onEnded { value in
                 if self.activeView.height > 50 {

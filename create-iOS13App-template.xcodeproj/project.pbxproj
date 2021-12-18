@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8400D5B6276CAA1200175423 /* CourseDatail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400D5B5276CAA1000175423 /* CourseDatail.swift */; };
 		840C9CC02764965800D3032B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C9CBF2764965800D3032B /* MenuView.swift */; };
 		8475E1D7276A4E3E00F3BF3E /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475E1D6276A4E3D00F3BF3E /* CourseList.swift */; };
 		849AA5C42764BFF4008C3ED1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849AA5C32764BFF4008C3ED1 /* Home.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8400D5B5276CAA1000175423 /* CourseDatail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDatail.swift; sourceTree = "<group>"; };
 		840C9CBF2764965800D3032B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		8475E1D6276A4E3D00F3BF3E /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		849AA5C32764BFF4008C3ED1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				840C9CBF2764965800D3032B /* MenuView.swift */,
 				849AA5C32764BFF4008C3ED1 /* Home.swift */,
 				8475E1D6276A4E3D00F3BF3E /* CourseList.swift */,
+				8400D5B5276CAA1000175423 /* CourseDatail.swift */,
 				849AA5C52764D9CA008C3ED1 /* HomeView.swift */,
 				849AA5D12767A1B0008C3ED1 /* Modifiers.swift */,
 				849AA5CF276603ED008C3ED1 /* RingView.swift */,
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AD2F7F27639A7200754D5C /* AppDelegate.swift in Sources */,
+				8400D5B6276CAA1200175423 /* CourseDatail.swift in Sources */,
 				849AA5CC2765FC6D008C3ED1 /* UpdateStore.swift in Sources */,
 				849AA5C82765F3E8008C3ED1 /* UpdateList.swift in Sources */,
 				840C9CC02764965800D3032B /* MenuView.swift in Sources */,

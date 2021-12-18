@@ -1,4 +1,5 @@
 # iOS13-template
 
-Template for iOS 13 including 
-- card component
+Create Template for iOS13 mobile application, this source code including : 
+
+- Daynanic New View

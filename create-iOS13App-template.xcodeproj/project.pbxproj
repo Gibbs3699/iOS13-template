@@ -31,6 +31,7 @@
 		84C2FBCC27722A6B00505A1F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBCB27722A6B00505A1F /* SDWebImage */; };
 		84C2FBCE27722A6B00505A1F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBCD27722A6B00505A1F /* SDWebImageMapKit */; };
 		84C2FBD127722B5A00505A1F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBD027722B5A00505A1F /* SDWebImageSwiftUI */; };
+		84C2FBD327722CB700505A1F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FBD227722CB700505A1F /* BlurView.swift */; };
 		84CE226527649B72002D7DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2F8227639A7200754D5C /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		84AD2F8727639A7500754D5C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84AD2F8A27639A7500754D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84AD2F8C27639A7500754D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C2FBD227722CB700505A1F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				849AA5C92765F783008C3ED1 /* UpdateDetail.swift */,
 				849AA5CB2765FC6D008C3ED1 /* UpdateStore.swift */,
 				849AA5CD276600E8008C3ED1 /* TabBar.swift */,
+				84C2FBD227722CB700505A1F /* BlurView.swift */,
 				84AD2F8427639A7500754D5C /* Assets.xcassets */,
 				84AD2F8927639A7500754D5C /* LaunchScreen.storyboard */,
 				84AD2F8C27639A7500754D5C /* Info.plist */,
@@ -225,6 +228,7 @@
 				8400D5BA2770D72B00175423 /* PostList.swift in Sources */,
 				84CE226527649B72002D7DCD /* ContentView.swift in Sources */,
 				84AD2F8127639A7200754D5C /* SceneDelegate.swift in Sources */,
+				84C2FBD327722CB700505A1F /* BlurView.swift in Sources */,
 				849AA5CE276600E8008C3ED1 /* TabBar.swift in Sources */,
 				8475E1D7276A4E3E00F3BF3E /* CourseList.swift in Sources */,
 			);

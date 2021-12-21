@@ -28,6 +28,9 @@
 		84AD2F8527639A7500754D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AD2F8427639A7500754D5C /* Assets.xcassets */; };
 		84AD2F8827639A7500754D5C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AD2F8727639A7500754D5C /* Preview Assets.xcassets */; };
 		84AD2F8B27639A7500754D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AD2F8927639A7500754D5C /* LaunchScreen.storyboard */; };
+		84C2FBCC27722A6B00505A1F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBCB27722A6B00505A1F /* SDWebImage */; };
+		84C2FBCE27722A6B00505A1F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBCD27722A6B00505A1F /* SDWebImageMapKit */; };
+		84C2FBD127722B5A00505A1F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBD027722B5A00505A1F /* SDWebImageSwiftUI */; };
 		84CE226527649B72002D7DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2F8227639A7200754D5C /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C2FBD127722B5A00505A1F /* SDWebImageSwiftUI in Frameworks */,
+				84C2FBCC27722A6B00505A1F /* SDWebImage in Frameworks */,
+				84C2FBCE27722A6B00505A1F /* SDWebImageMapKit in Frameworks */,
 				8400D5BF2770E68200175423 /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +146,9 @@
 			name = "create-iOS13App-template";
 			packageProductDependencies = (
 				8400D5BE2770E68200175423 /* Contentful */,
+				84C2FBCB27722A6B00505A1F /* SDWebImage */,
+				84C2FBCD27722A6B00505A1F /* SDWebImageMapKit */,
+				84C2FBD027722B5A00505A1F /* SDWebImageSwiftUI */,
 			);
 			productName = "create-iOS13App-template";
 			productReference = 84AD2F7B27639A7200754D5C /* create-iOS13App-template.app */;
@@ -170,6 +179,8 @@
 			mainGroup = 84AD2F7227639A7200754D5C;
 			packageReferences = (
 				8400D5BD2770E68200175423 /* XCRemoteSwiftPackageReference "contentful.swift" */,
+				84C2FBCA27722A6A00505A1F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				84C2FBCF27722B5A00505A1F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 84AD2F7C27639A7200754D5C /* Products */;
 			projectDirPath = "";
@@ -423,6 +434,22 @@
 				minimumVersion = 5.5.1;
 			};
 		};
+		84C2FBCA27722A6A00505A1F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.1;
+			};
+		};
+		84C2FBCF27722B5A00505A1F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -430,6 +457,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8400D5BD2770E68200175423 /* XCRemoteSwiftPackageReference "contentful.swift" */;
 			productName = Contentful;
+		};
+		84C2FBCB27722A6B00505A1F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C2FBCA27722A6A00505A1F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		84C2FBCD27722A6B00505A1F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C2FBCA27722A6A00505A1F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		84C2FBD027722B5A00505A1F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84C2FBCF27722B5A00505A1F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

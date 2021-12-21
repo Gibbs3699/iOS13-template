@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
-struct CourseDatail: View {
-    var course : Course
-    @Binding var show : Bool
+struct CourseDetail: View {
+    var course: Course
+    @Binding var show: Bool
+    @Binding var active: Bool
+    @Binding var activeIndex: Int
     
     var body: some View {
         ScrollView {
@@ -25,9 +28,6 @@ struct CourseDatail: View {
                         }
                         Spacer()
                         ZStack {
-                            Image(uiImage: course.logo)
-                                .opacity(show ? 0 : 1)
-                            
                             VStack {
                                 Image(systemName: "xmark")
                                     .font(.system(size: 16, weight: .medium))
@@ -36,11 +36,15 @@ struct CourseDatail: View {
                             .frame(width: 36, height: 36)
                             .background(Color.black)
                             .clipShape(Circle())
-                            .opacity(show ? 1 : 0)
+                            .onTapGesture {
+                                self.show = false
+                                self.active = false
+                                self.activeIndex = -1
+                            }
                         }
                     }
                     Spacer()
-                    Image(uiImage: course.image)
+                    WebImage(url: course.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: .infinity)
@@ -48,11 +52,11 @@ struct CourseDatail: View {
                 }
                 .padding(show ? 30 : 20)
                 .padding(.top, CGFloat(show ? 30 : 0))
-        //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
-                .frame(maxWidth: CGFloat(show ? .infinity : screen.width - 60), maxHeight: CGFloat(show ? 460 : 280))
+                    //        .frame(width: show ? screen.width : screen.width - 60, height: show ? screen.height : 280)
+                    .frame(maxWidth: CGFloat(show ? .infinity : screen.width - 60), maxHeight: CGFloat(show ? 460 : 280))
                     .background(Color(course.color))
-                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                    .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
                 
                 VStack(alignment: .leading, spacing: 30.0) {
                     Text("Take your SwiftUI app to the App Store with advanced techniques like API data, packages and CMS.")
@@ -67,11 +71,12 @@ struct CourseDatail: View {
                 .padding(30)
             }
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct CourseDatail_Previews: PreviewProvider {
+struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CourseDatail(course: courseData[0], show: .constant(true))
+        CourseDetail(course: courseData[0], show: .constant(true), active: .constant(true), activeIndex: .constant(-1))
     }
 }

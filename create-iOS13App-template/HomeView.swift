@@ -25,10 +25,10 @@ struct HomeView: View {
                     
                     Button(action: {self.showUpdate.toggle()}) {
                         Image(systemName: "bell")
-                            .renderingMode(.original)
+//                            .renderingMode(.original)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 36, height: 36)
-                            .background(Color.white)
+                            .background(Color("background3"))
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                             .shadow(color: Color.black.opacity(0.1), radius: 1, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 1.0)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10)
@@ -144,12 +144,12 @@ struct WatchRingsView: View {
                 
                 VStack(alignment: .leading, spacing: 6.0) {
                     Text("6 mins").font(.subheadline).fontWeight(.bold)
-                    Text("6 mins").font(.caption)
+                    Text("Watch for 6 mins").font(.caption)
                 }
                 .modifier(FontModifiers())
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifiers())
             
@@ -157,7 +157,7 @@ struct WatchRingsView: View {
                 RingView(color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), width: 32, height: 32, percent: 54, show: .constant(true))
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifiers())
             
@@ -165,7 +165,7 @@ struct WatchRingsView: View {
                 RingView(color1: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), width: 32, height: 32, percent: 54, show: .constant(true))
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifiers())
         }

@@ -33,6 +33,7 @@
 		84C2FBD127722B5A00505A1F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84C2FBD027722B5A00505A1F /* SDWebImageSwiftUI */; };
 		84C2FBD327722CB700505A1F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2FBD227722CB700505A1F /* BlurView.swift */; };
 		84CD95F727736D8D00C4C912 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD95F627736D8D00C4C912 /* Buttons.swift */; };
+		84CD95F92774ACE300C4C912 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD95F82774ACE300C4C912 /* LoginView.swift */; };
 		84CE226527649B72002D7DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2F8227639A7200754D5C /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		84AD2F8C27639A7500754D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C2FBD227722CB700505A1F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		84CD95F627736D8D00C4C912 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		84CD95F82774ACE300C4C912 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				8400D5B92770D72900175423 /* PostList.swift */,
 				8400D5B5276CAA1000175423 /* CourseDatail.swift */,
 				849AA5C52764D9CA008C3ED1 /* HomeView.swift */,
+				84CD95F82774ACE300C4C912 /* LoginView.swift */,
 				84CD95F627736D8D00C4C912 /* Buttons.swift */,
 				849AA5D12767A1B0008C3ED1 /* Modifiers.swift */,
 				849AA5CF276603ED008C3ED1 /* RingView.swift */,
@@ -230,6 +233,7 @@
 				849AA5C62764D9CA008C3ED1 /* HomeView.swift in Sources */,
 				8400D5BA2770D72B00175423 /* PostList.swift in Sources */,
 				84CE226527649B72002D7DCD /* ContentView.swift in Sources */,
+				84CD95F92774ACE300C4C912 /* LoginView.swift in Sources */,
 				84CD95F727736D8D00C4C912 /* Buttons.swift in Sources */,
 				84AD2F8127639A7200754D5C /* SceneDelegate.swift in Sources */,
 				84C2FBD327722CB700505A1F /* BlurView.swift in Sources */,

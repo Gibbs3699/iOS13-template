@@ -55,6 +55,8 @@ struct Home: View {
                     }
                 )
             
+            Buttons()
+            
             if showContent {
                 BlurView(style: .systemMaterial).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 

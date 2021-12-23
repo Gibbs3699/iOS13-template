@@ -83,7 +83,7 @@ struct RectangleButton: View {
             .gesture(
                 LongPressGesture(minimumDuration: 0.5, maximumDistance: 10).onChanged { value in
                     self.tap = true
-                    impact(type: .heavy)
+                    impact(style: .heavy)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.tap = false
                     }
@@ -131,6 +131,7 @@ struct CircleButton: View {
             .gesture(
                 LongPressGesture().onChanged { value in
                     self.tap = true
+                    impact(style: .heavy)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.tap = false
                     }
@@ -198,6 +199,7 @@ struct PayButton: View {
             .gesture(
                 LongPressGesture().updating($tap) { currentState, gestureState, transcation in
                     gestureState = currentState
+                    impact(style: .heavy)
                 }
                 .onEnded { value in
                     self.press.toggle()

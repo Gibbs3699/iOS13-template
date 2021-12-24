@@ -12,3 +12,4 @@ Create Template for iOS13 mobile application, this source code including :
 - Login Environment Object
 - Persistent Login with UserDefaults
 - Adapting for iPad
+- Environment Size Class

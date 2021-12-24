@@ -7,3 +7,4 @@ Create Template for iOS13 mobile application, this source code including :
 - TextField and Password
 - Keyboard and Alerts
 - Lottie Loading Animation
+- Success Sequence Animation

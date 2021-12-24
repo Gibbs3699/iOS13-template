@@ -8,3 +8,6 @@ Create Template for iOS13 mobile application, this source code including :
 - Keyboard and Alerts
 - Lottie Loading Animation
 - Success Sequence Animation
+- Login with Firebase
+
+

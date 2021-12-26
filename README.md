@@ -15,3 +15,4 @@ Create Template for iOS13 mobile application, this source code including :
 - Environment Size Class
 - Fixing the UI and Animation
 - TabBar Below Views
+- Scrollable Card Content

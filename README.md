@@ -13,3 +13,4 @@ Create Template for iOS13 mobile application, this source code including :
 - Persistent Login with UserDefaults
 - Adapting for iPad
 - Environment Size Class
+- Fixing the UI and Animation

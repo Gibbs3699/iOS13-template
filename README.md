@@ -16,3 +16,4 @@ Create Template for iOS13 mobile application, this source code including :
 - Fixing the UI and Animation
 - TabBar Below Views
 - Scrollable Card Content
+- Submit to the App Store

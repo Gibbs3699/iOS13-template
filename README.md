@@ -7,6 +7,7 @@ Create Template for iOS13 mobile application, this source code including :
 - Tap Progress Animation
 - Haptic Feedback
 - Login and Variable Font Size
+- 3D Parallax and Looping Animation
 - Daynanic New View
 - API and Jason
 - TextField and Password

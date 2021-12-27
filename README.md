@@ -2,7 +2,7 @@
 
 Create Template for iOS13 mobile application, this source code including : 
 - Neumorphic Buttons
-- 
+- Long Press Gesture
 - Daynanic New View
 - API and Jason
 - TextField and Password

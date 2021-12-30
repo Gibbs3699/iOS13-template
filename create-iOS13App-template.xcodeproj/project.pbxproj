@@ -39,6 +39,7 @@
 		84CD9607277DEDA600C4C912 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 84CD9606277DEDA600C4C912 /* Lottie */; };
 		84CD9609277DEEB000C4C912 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD9608277DEEB000C4C912 /* LottieView.swift */; };
 		84CD960B277DF10000C4C912 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD960A277DF10000C4C912 /* LoadingView.swift */; };
+		84CD960D277DF38B00C4C912 /* SuccessVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD960C277DF38B00C4C912 /* SuccessVIew.swift */; };
 		84CE226527649B72002D7DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2F8227639A7200754D5C /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		84CD9602277DEC5000C4C912 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		84CD9608277DEEB000C4C912 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		84CD960A277DF10000C4C912 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		84CD960C277DF38B00C4C912 /* SuccessVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				8400D5B5276CAA1000175423 /* CourseDatail.swift */,
 				849AA5C52764D9CA008C3ED1 /* HomeView.swift */,
 				84CD95F82774ACE300C4C912 /* LoginView.swift */,
+				84CD960C277DF38B00C4C912 /* SuccessVIew.swift */,
 				84CD95F627736D8D00C4C912 /* Buttons.swift */,
 				84CD9608277DEEB000C4C912 /* LottieView.swift */,
 				84CD960A277DF10000C4C912 /* LoadingView.swift */,
@@ -260,6 +263,7 @@
 				849AA5C62764D9CA008C3ED1 /* HomeView.swift in Sources */,
 				8400D5BA2770D72B00175423 /* PostList.swift in Sources */,
 				84CE226527649B72002D7DCD /* ContentView.swift in Sources */,
+				84CD960D277DF38B00C4C912 /* SuccessVIew.swift in Sources */,
 				84CD95F92774ACE300C4C912 /* LoginView.swift in Sources */,
 				84CD95F727736D8D00C4C912 /* Buttons.swift in Sources */,
 				84AD2F8127639A7200754D5C /* SceneDelegate.swift in Sources */,

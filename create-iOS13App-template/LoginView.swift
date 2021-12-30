@@ -14,7 +14,22 @@ struct LoginView: View {
     @State var showAlert = false
     @State var alertMessage = "Something went wrong."
     @State var isLoading = false
+    @State var isSuccess = false
     
+    func login() {
+        self.hideKeyboard()
+        self.isFocused = false
+        self.isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            self.isLoading = false
+//                            self.showAlert = true
+            self.isSuccess = true
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                self.isSuccess = false
+            }
+        }
+    }
     
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -90,14 +105,7 @@ struct LoginView: View {
                     Spacer()
                     
                     Button(action: {
-                        self.hideKeyboard()
-                        self.isFocused = false
-                        self.isLoading = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                            self.isLoading = false
-                            self.showAlert = true
-                            
-                        }
+                        self.login()
                     }) {
                         Text("Log in").foregroundColor(.black)
                     }
@@ -123,6 +131,10 @@ struct LoginView: View {
             
             if isLoading{
                 LoadingView()
+            }
+            
+            if isSuccess{
+                SuccessVIew()
             }
         }
     }
@@ -168,7 +180,7 @@ struct CoverView: View {
                     .offset(x: -150, y: -200)
                     .rotationEffect(Angle(degrees: show ? 360+90 : 90))
                     .blendMode(.plusDarker)
-//                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
+                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
                     .animation(nil)
                     .onAppear { self.show = true }
                 
@@ -176,7 +188,7 @@ struct CoverView: View {
                     .offset(x: -200, y: -250)
                     .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
                     .blendMode(.overlay)
-//                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
+                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
                     .animation(nil)
             }
         )

@@ -15,38 +15,32 @@ struct LoginView: View {
     @State var showAlert = false
     @State var alertMessage = "Something went wrong."
     @State var isLoading = false
-    @State var isSuccess = false
+    @State var isSuccessful = false
+    @EnvironmentObject var user: UserStore
     
     func login() {
         self.hideKeyboard()
         self.isFocused = false
         self.isLoading = true
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-//            self.isLoading = false
-////                            self.showAlert = true
-//            self.isSuccess = true
-//
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-//                self.isSuccess = false
-//            }
-//        }
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-             self.isLoading = false
-
-                 if error != nil {
-                 self.alertMessage = error?.localizedDescription ?? ""
-                 self.showAlert = true
-             } else {
-                 self.isSuccess = true
-
-                         DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                                self.isSuccess = false
-                            self.email = ""
-                            self.password = ""
-                         }
-             }
-         }
+            self.isLoading = false
+            
+            if error != nil {
+                self.alertMessage = error?.localizedDescription ?? ""
+                self.showAlert = true
+            } else {
+                self.isSuccessful = true
+                self.user.isLogged = true
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.email = ""
+                    self.password = ""
+                    self.isSuccessful = false
+                    self.user.showLogin = false
+                }
+            }
+        }
     }
     
     func hideKeyboard() {
@@ -129,9 +123,9 @@ struct LoginView: View {
                     }
                     .padding(12)
                     .padding(.horizontal, 30)
-                    .background(Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)))
+                    .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .shadow(color: Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
+                    .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                     .alert(isPresented: $showAlert) {
                         Alert(title: Text("Error"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))
                     }
@@ -147,11 +141,11 @@ struct LoginView: View {
                 self.hideKeyboard()
             }
             
-            if isLoading{
+            if isLoading {
                 LoadingView()
             }
             
-            if isSuccess{
+            if isSuccessful {
                 SuccessVIew()
             }
         }
@@ -185,7 +179,7 @@ struct CoverView: View {
                 .font(.subheadline)
                 .frame(width: 250)
                 .offset(x: viewState.width/20, y: viewState.height/20)
-            
+    
             Spacer()
         }
         .multilineTextAlignment(.center)
@@ -199,7 +193,7 @@ struct CoverView: View {
                     .rotationEffect(Angle(degrees: show ? 360+90 : 90))
                     .blendMode(.plusDarker)
                     .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
-                    .animation(nil)
+//                    .animation(nil)
                     .onAppear { self.show = true }
                 
                 Image(uiImage: #imageLiteral(resourceName: "Blob"))
@@ -207,7 +201,7 @@ struct CoverView: View {
                     .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
                     .blendMode(.overlay)
                     .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
-                    .animation(nil)
+//                    .animation(nil)
             }
         )
             .background(

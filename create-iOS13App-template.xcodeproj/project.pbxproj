@@ -43,6 +43,7 @@
 		84CD960F277F34D500C4C912 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84CD960E277F34D300C4C912 /* GoogleService-Info.plist */; };
 		84CD9612277F367500C4C912 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84CD9611277F367500C4C912 /* FirebaseAuth */; };
 		84CD9614277F367500C4C912 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84CD9613277F367500C4C912 /* FirebaseFirestore */; };
+		84CD9616277F457F00C4C912 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD9615277F457F00C4C912 /* UserStore.swift */; };
 		84CE226527649B72002D7DCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD2F8227639A7200754D5C /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		84CD960A277DF10000C4C912 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		84CD960C277DF38B00C4C912 /* SuccessVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVIew.swift; sourceTree = "<group>"; };
 		84CD960E277F34D300C4C912 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84CD9615277F457F00C4C912 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				8400D5B5276CAA1000175423 /* CourseDatail.swift */,
 				849AA5C52764D9CA008C3ED1 /* HomeView.swift */,
 				84CD95F82774ACE300C4C912 /* LoginView.swift */,
+				84CD9615277F457F00C4C912 /* UserStore.swift */,
 				84CD960C277DF38B00C4C912 /* SuccessVIew.swift */,
 				84CD95F627736D8D00C4C912 /* Buttons.swift */,
 				84CD9608277DEEB000C4C912 /* LottieView.swift */,
@@ -274,6 +277,7 @@
 				849AA5C62764D9CA008C3ED1 /* HomeView.swift in Sources */,
 				8400D5BA2770D72B00175423 /* PostList.swift in Sources */,
 				84CE226527649B72002D7DCD /* ContentView.swift in Sources */,
+				84CD9616277F457F00C4C912 /* UserStore.swift in Sources */,
 				84CD960D277DF38B00C4C912 /* SuccessVIew.swift in Sources */,
 				84CD95F92774ACE300C4C912 /* LoginView.swift in Sources */,
 				84CD95F727736D8D00C4C912 /* Buttons.swift in Sources */,

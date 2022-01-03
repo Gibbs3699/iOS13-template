@@ -1,6 +1,6 @@
 # iOS13-template
 
-mock commit 1 2
+mock commit 1 2 3
 
 Create Template for iOS13 mobile application, this source code including : 
 - Neumorphic Buttons

@@ -9,6 +9,7 @@ import SwiftUI
 
 class UserStore: ObservableObject {
     @Published var isLogged: Bool = UserDefaults.standard.bool(forKey: "isLogged") {
+        // app load then will pool the data
         didSet {
             UserDefaults.standard.set(self.isLogged, forKey: "isLogged")
         }
